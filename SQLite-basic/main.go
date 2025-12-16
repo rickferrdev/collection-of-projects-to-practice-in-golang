@@ -29,13 +29,20 @@ func main() {
 	})
 
 	log.Println("Pet added successfully")
+
 	allPets, err := pets.GetAllPets(conn)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	log.Println("All Pets:", allPets)
+
 	err = pets.DeletePet(conn, 1)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	err = pets.DeletePet(conn, 2)
 	if err != nil {
 		log.Fatalln(err)
 	}
