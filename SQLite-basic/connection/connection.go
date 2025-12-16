@@ -4,6 +4,8 @@ package connection
 import (
 	"database/sql"
 	"log"
+
+	_ "modernc.org/sqlite"
 )
 
 func Connect() *sql.DB {
