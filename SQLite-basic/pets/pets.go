@@ -47,10 +47,8 @@ func GetAllPets(conn *sql.DB) ([]Pets, error) {
 	var pets []Pets
 	for rows.Next() {
 		var pet Pets
-		if err := rows.Scan(&pet.ID, &pet.Name, &pet.Age, &pet.Type); err != nil {
-			log.Fatalln(err)
-			return nil, err
-		}
+		rows.Scan(&pet.ID, &pet.Name, &pet.Age, &pet.Type)
+		pets = append(pets, pet)
 	}
 
 	return pets, nil
