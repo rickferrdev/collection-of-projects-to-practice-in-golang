@@ -8,6 +8,7 @@ import (
 	_ "modernc.org/sqlite"
 )
 
+// Connect establishes a connection to the SQLite database
 func Connect() *sql.DB {
 	db, err := sql.Open("sqlite", "database.sqlite3")
 	if err != nil {
