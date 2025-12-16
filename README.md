@@ -4,4 +4,4 @@ This repository was created with the goal of documenting the progress and develo
 
 ## Objective
 
-The purpose of this project is educational guidance. The repository serves as a centralized archive for:
+The purpose of this project is educational guidance.
