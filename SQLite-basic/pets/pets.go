@@ -13,6 +13,7 @@ type Pets struct {
 	Type string
 }
 
+// CreateTable creates the pets table if it does not exist
 func CreateTable(conn *sql.DB) error {
 	query := `CREATE TABLE IF NOT EXISTS pets (
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
